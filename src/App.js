@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import {CssBaseline, Box, Container} from '@mui/material'
+import Detail from './components/Detail'
+import Form from './components/Form'
+import LineChart from './components/LineChart'
 
-function App() {
+const app = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Box sx={{ bgcolor: 'fff', height: '100vh' }} >
+          <Detail />
+          <Form />
+         <LineChart /> 
+         </Box>
+      </Container>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default app
